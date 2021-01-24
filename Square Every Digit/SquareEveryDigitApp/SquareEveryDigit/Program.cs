@@ -9,8 +9,6 @@ namespace SquareEveryDigit
             var result = Kata.SquareDigits(9119);
             Console.WriteLine(result);
 
-
-
             Console.ReadLine();
         }
     }
