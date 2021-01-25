@@ -2,14 +2,6 @@
 
 namespace TenMinuteWalk
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-
     // You live in the city of Cartesia where all roads are laid out in a perfect grid. 
     //You arrived ten minutes too early to an appointment, so you decided to take the 
     //opportunity to go for a short walk. The city provides its citizens with a Walk 
@@ -23,14 +15,66 @@ namespace TenMinuteWalk
     //Note: you will always receive a valid array containing a random assortment of direction 
     //letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] walk = new string[] { "n", "n", "n", "s", "n", "s", "n", "s", "n", "s" };
+            var result = Kata.IsValidWalk(walk);
+
+            Console.WriteLine($"The result is: {result}");
+
+
+
+            Console.ReadLine();
+        }
+    }
+
     public class Kata
     {
         public static bool IsValidWalk(string[] walk)
         {
-            if (walk.Length < 10)
+            var output = false;
+
+            if (walk.Length != 10)
             {
-                return false;
+                return output;
             }
+
+            var s = 0;
+            var n = 0;
+            var e = 0;
+            var w = 0;
+
+            foreach (var dir in walk)
+            {
+                if (dir == "n")
+                {
+                    n++;
+                }
+
+                if (dir == "s")
+                {
+                    s++;
+                }
+
+                if (dir == "e")
+                {
+                    e++;
+                }
+
+                if (dir == "w")
+                {
+                    w++;
+                }
+            }
+
+            if (n == s && e == w)
+            {
+                output = true;
+            }
+
+            return output;
         }
     }
 }
