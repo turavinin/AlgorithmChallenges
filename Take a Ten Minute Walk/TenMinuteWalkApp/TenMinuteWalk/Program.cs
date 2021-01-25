@@ -37,7 +37,7 @@ namespace TenMinuteWalk
     {
         static void Main(string[] args)
         {
-            string[] walk = new string[] { "n", "n", "n", "s", "n", "s", "n", "s", "n", "s" };
+            string[] walk = new string[] { "n", "n", "n", "n", "n", "s", "s", "s", "s", "s" };
             var result = Kata.IsValidWalk(walk);
 
             Console.WriteLine($"The result is: {result}");
@@ -66,31 +66,13 @@ namespace TenMinuteWalk
 
             foreach (var dir in walk)
             {
-                if (dir == "n")
-                {
-                    n++;
-                }
-
-                if (dir == "s")
-                {
-                    s++;
-                }
-
-                if (dir == "e")
-                {
-                    e++;
-                }
-
-                if (dir == "w")
-                {
-                    w++;
-                }
+                if (dir == "n") n++;
+                else if (dir == "s") s++;
+                else if (dir == "e") e++;
+                else if (dir == "w") w++;
             }
 
-            if (n == s && e == w)
-            {
-                output = true;
-            }
+            if (n == s && e == w) output = true;
 
             return output;
         }
