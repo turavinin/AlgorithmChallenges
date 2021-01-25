@@ -15,6 +15,24 @@ namespace TenMinuteWalk
     //Note: you will always receive a valid array containing a random assortment of direction 
     //letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
 
+
+
+    //BEST SOLUTION
+
+    //public static bool IsValidWalk(string[] walk)
+    //{
+    //    if (walk.Length != 10) return false;
+    //    var x = 0; var y = 0;
+    //    foreach (var dir in walk)
+    //    {
+    //        if (dir == "n") x++;
+    //        else if (dir == "s") x--;
+    //        else if (dir == "e") y++;
+    //        else if (dir == "w") y--;
+    //    }
+    //    return x == 0 && y == 0;
+    //}
+
     class Program
     {
         static void Main(string[] args)
