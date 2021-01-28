@@ -2,6 +2,19 @@
 
 namespace BuildPileCubes
 {
+
+    // BEST SOLUTION
+    //public class ASum
+    //{
+    //    public static long findNb(long m)
+    //    {
+    //        long total = 1, i = 2;
+    //        for (; total < m; i++) total += i * i * i;
+    //        return total == m ? i - 1 : -1;
+    //    }
+    //}
+
+
     class Program
     {
         static void Main(string[] args)
