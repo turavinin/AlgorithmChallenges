@@ -11,7 +11,7 @@ namespace ConcesionariaLibrary.Models
 
         public override string ToString()
         {
-            return string.Format($"Marca: {Marca} // Modelo: {Modelo} // Cilindrada: {Cilindrada} // Precio: {Precio}");
+            return string.Format($"Marca: {Marca} // Modelo: {Modelo} // Cilindrada: {Cilindrada} // Precio: ${Precio}");
         }
     }
 }
