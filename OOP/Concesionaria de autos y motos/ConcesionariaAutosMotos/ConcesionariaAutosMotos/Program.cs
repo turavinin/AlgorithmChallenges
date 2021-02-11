@@ -15,13 +15,13 @@ namespace ConcesionariaAutosMotos
             auto.Marca = "Ford";
             auto.Modelo = "Fiesta";
             auto.Puertas = 4;
-            auto._precio = 30000.00M;
+            auto.Precio = 30000.00M;
 
             MotoModel moto = new MotoModel();
             moto.Marca = "Honda";
             moto.Modelo = "Titan";
             moto.Cilindrada = "125cc";
-            moto._precio = 200000.00M;
+            moto.Precio = 200000.00M;
 
             List<VehiculoModel> vehiculos = new List<VehiculoModel>();
             vehiculos.Add(auto);

@@ -7,16 +7,16 @@ namespace ConcesionariaLibrary.Models
 {
     public class VehiculoModel
     {
-        public decimal _precio;
-
         public string Marca { get; set; }
         public string Modelo { get; set; }
-        public string Precio
+        public decimal Precio { get; set; }
+
+        protected string PrecioFromateado
         {
             get 
             {
                 var culture = CultureInfo.GetCultureInfo("de-DE");
-                return string.Format(culture, "{0:n}", _precio); 
+                return string.Format(culture, "{0:n}", Precio);
             }
         }
 
