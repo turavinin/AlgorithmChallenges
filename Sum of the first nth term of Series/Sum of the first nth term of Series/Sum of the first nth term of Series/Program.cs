@@ -6,7 +6,7 @@ namespace Sum_of_the_first_nth_term_of_Series
     {
         static void Main(string[] args)
         {
-            var result = NthSeries.seriesSum(5);
+            var result = NthSeries.seriesSum(0);
             Console.WriteLine(result);
 
             Console.ReadLine();
@@ -19,15 +19,6 @@ namespace Sum_of_the_first_nth_term_of_Series
         public static string seriesSum(int n)
         {
 
-            if (n == 0)
-            {
-                decimal result = 0.00m;
-                string output = result.ToString("F");
-
-                return output;
-            } 
-            else
-            {
                 decimal result = 0.00m;
                 // Etinerar en nth
                 for (var i = 1; i <= n; i++)
@@ -38,7 +29,6 @@ namespace Sum_of_the_first_nth_term_of_Series
 
                 string output = result.ToString("F");
                 return output;
-            }
 
 
             // BEST SOLUTION
