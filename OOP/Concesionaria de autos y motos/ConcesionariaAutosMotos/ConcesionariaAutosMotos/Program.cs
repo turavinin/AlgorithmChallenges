@@ -11,6 +11,7 @@ namespace ConcesionariaAutosMotos
         static void Main(string[] args)
         {
 
+
             AutoModel auto = new AutoModel();
             auto.Marca = "Ford";
             auto.Modelo = "Fiesta";
@@ -33,9 +34,6 @@ namespace ConcesionariaAutosMotos
 
                 Console.WriteLine(item) ;
             }
-
-
-
 
 
             Console.ReadLine();
